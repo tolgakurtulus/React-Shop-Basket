@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-Shop-Basket/static/css/main.627e9b96.chunk.css",
+    "main.js": "/React-Shop-Basket/static/js/main.9a9cdd14.chunk.js",
+    "main.js.map": "/React-Shop-Basket/static/js/main.9a9cdd14.chunk.js.map",
+    "runtime-main.js": "/React-Shop-Basket/static/js/runtime-main.a7752ca8.js",
+    "runtime-main.js.map": "/React-Shop-Basket/static/js/runtime-main.a7752ca8.js.map",
+    "static/js/2.da53d89a.chunk.js": "/React-Shop-Basket/static/js/2.da53d89a.chunk.js",
+    "static/js/2.da53d89a.chunk.js.map": "/React-Shop-Basket/static/js/2.da53d89a.chunk.js.map",
+    "index.html": "/React-Shop-Basket/index.html",
+    "static/css/main.627e9b96.chunk.css.map": "/React-Shop-Basket/static/css/main.627e9b96.chunk.css.map",
+    "static/js/2.da53d89a.chunk.js.LICENSE.txt": "/React-Shop-Basket/static/js/2.da53d89a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a7752ca8.js",
+    "static/js/2.da53d89a.chunk.js",
+    "static/css/main.627e9b96.chunk.css",
+    "static/js/main.9a9cdd14.chunk.js"
+  ]
+}
