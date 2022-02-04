@@ -1,0 +1,26 @@
+.c-basket {
+    position: absolute;
+    top: 30px;
+    right: 150px;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__img {
+        img {
+            width: 75px;
+            height: 75px;
+        }
+
+    }
+
+    &__cart {
+        position: absolute;
+        margin-top: -40px;
+        margin-left: 100px;
+    }
+}  

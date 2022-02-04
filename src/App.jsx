@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.scss';
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage/HomePage.jsx";
+import BasketPage from "./Pages/BasketPage/BasketPage.jsx";
+import Header from "./Components/Header/Header.jsx";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App c-app">
-      <header>
-        <h1>Header</h1>
-      </header>
+    <div className="c-app">
+      <Header />
+      <Routes>
+        <Route exact path="/React-Shop-Basket" element={<HomePage />} />
+        <Route exact path="/React-Shop-Basket/Basket" element={<BasketPage />} />
+      </Routes>
     </div>
   );
 }
