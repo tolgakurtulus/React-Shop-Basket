@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart } from "../../redux/actions/index";
+import { removeFromCart, adjustItemQty } from "../../redux/actions/index";
 import "./BasketPage.scss";
 
 const BasketPage = (props) => {
   const products = useSelector((state) => state.shop.cart);
   const dispatch = useDispatch()
-
-
-  const onChangeHandler = (e) => {
-    console.log("~ easdasd", e.target.value);
+  
+  
+  const onChangeHandler = (val, id) => {
+    dispatch(adjustItemQty(id, val))
   };
 
   return (
@@ -34,8 +34,8 @@ const BasketPage = (props) => {
                         type="number"
                         id="qty"
                         name="qty"
-                        // value={input}
-                        onChange={onChangeHandler}
+                        value={item.qty}
+                        onChange={(e) => onChangeHandler(e.target.value, item.id)}
                       />
                     </div>
                   </div>
