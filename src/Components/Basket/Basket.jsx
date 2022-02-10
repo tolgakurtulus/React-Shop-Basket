@@ -6,19 +6,23 @@ import Button from '../Button/Button.jsx';
 import "./Basket.scss";
 
 const Basket = () => {
-  //   const currentUser = useSelector((state) => state.dataList);
+  const products = useSelector((state) => state.shop.cart);
+  let productsLength = products ? products.length : 0;
 
   return (
-    <div className="c-basket">
-      <div className="c-basket__row">
-        <div className="c-basket__img">
-          <img src="/React-Shop-Basket/img/basket.png" alt="Basket" />
-        </div>
-        <div className="c-basket__cart">
-          <Button color={"orange square"} title={"Testad"} />
+    <Link to="/React-Shop-Basket/Basket">
+      <div className="c-basket">
+        <div className="c-basket__row">
+          <div className="c-basket__img">
+            <img src="/React-Shop-Basket/img/basket.png" alt="Basket" />
+          </div>
+          <div className="c-basket__cart">
+            <Button color={"orange square"} title={`${productsLength}`} />
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
+
   );
 };
 

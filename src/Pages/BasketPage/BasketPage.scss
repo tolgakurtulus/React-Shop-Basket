@@ -1,6 +1,16 @@
 .c-basketpage {
   padding: 50px 15%;
 
+  &__waste-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    h2 {
+      color: white;
+    }
+  }
   &__row {
     display: flex;
     justify-content: flex-start;
@@ -31,10 +41,31 @@
     }
   }
   &__container {
-      width: calc(100% - 100px);
-      padding: 10px 50px;
+    width: calc(100% - 100px);
+    padding: 10px 50px;
   }
 
+  &__delete-button {
+    button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 500ms;
+      background-color: red;
+      border: 1px solid red;
+      color: white;
+
+      &:hover {
+        background-color: white;
+        border: 1px solid red;
+        color: black;
+      }
+    }
+  }
 
   &__up-container,
   &__middle-container,

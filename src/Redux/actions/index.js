@@ -1,11 +1,36 @@
-export const addBasket = book => {
-    return { type: "ADD_BASKET", payload: book };
+import * as actionTypes from "../types/index.js";
+
+export const addToCart = (itemID) => {
+  return {
+    type: actionTypes.ADD_TO_CART,
+    payload: {
+      id: itemID,
+    },
+  };
 };
 
-export const removeBasket = key => {
-    return { type: "REMOVE_BASKET", payload: key };
+export const removeFromCart = (itemID) => {
+  return {
+    type: actionTypes.REMOVE_FROM_CART,
+    payload: {
+      id: itemID,
+    },
+  };
 };
 
-export const updateBasket = (price, key) => {
-    return { type: "UPDATE_BASKET", payload: { selectval: price, keyid: key }};
+export const adjustItemQty = (itemID, qty) => {
+  return {
+    type: actionTypes.ADJUST_ITEM_QTY,
+    payload: {
+      id: itemID,
+      qty,
+    },
+  };
+};
+
+export const loadCurrentItem = (item) => {
+  return {
+    type: actionTypes.LOAD_CURRENT_ITEM,
+    payload: item,
+  };
 };
