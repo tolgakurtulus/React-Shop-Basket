@@ -5,12 +5,24 @@ import "./BasketPage.scss";
 
 const BasketPage = (props) => {
   const products = useSelector((state) => state.shop.cart);
+  const [ total, setTotal] = useState();
   const dispatch = useDispatch()
   
   
   const onChangeHandler = (val, id) => {
     dispatch(adjustItemQty(id, val))
   };
+
+
+  useEffect(() => {
+
+    let totalVal = 0;
+    products.forEach(function(element, i) {
+      totalVal =+ totalVal + products[i].qty * products[i].price;
+    });
+
+    setTotal(totalVal)
+  },[products]);
 
   return (
     <div className="c-basketpage">
@@ -64,7 +76,7 @@ const BasketPage = (props) => {
                 <p>
                   <b>Total: </b>
                 </p>
-                <p>$ 500 </p>
+                <p>$ {total} </p>
               </div>
             </div>
           </div>
