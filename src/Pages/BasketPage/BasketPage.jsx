@@ -8,14 +8,11 @@ const BasketPage = (props) => {
   const [ total, setTotal] = useState();
   const dispatch = useDispatch()
   
-  
   const onChangeHandler = (val, id) => {
     dispatch(adjustItemQty(id, val))
   };
 
-
   useEffect(() => {
-
     let totalVal = 0;
     products.forEach(function(element, i) {
       totalVal =+ totalVal + products[i].qty * products[i].price;

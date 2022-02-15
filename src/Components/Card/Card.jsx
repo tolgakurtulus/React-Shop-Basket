@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/index";
-import Button from '../Button/Button.jsx';
 import "./Card.scss";
 
 const Card = () => {
@@ -12,7 +11,7 @@ const Card = () => {
     <div className="c-card">
       <div className="c-card__row">
         {products && products.map((item) => (
-          <div className="c-card__item">
+          <div key={item.id} className="c-card__item">
             <div className="c-card__img">
               <img src={item.image} alt={item.title} />
             </div>

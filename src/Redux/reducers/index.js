@@ -4,21 +4,17 @@ import { Data } from "../../Assets/Data";
 const INITIAL_STATE = {
   products: Data,
   cart: [],
-  currentItem: null,
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
-      // Great Item data from products array
       const item = state.products.find(
         (product) => product.id === action.payload.id
       );
-      // Check if Item is in cart already
       const inCart = state.cart.find((item) =>
         item.id === action.payload.id ? true : false
       );
-
       return {
         ...state,
         cart: inCart
@@ -42,11 +38,6 @@ const shopReducer = (state = INITIAL_STATE, action) => {
             ? { ...item, qty: +action.payload.qty }
             : item
         ),
-      };
-    case actionTypes.LOAD_CURRENT_ITEM:
-      return {
-        ...state,
-        currentItem: action.payload,
       };
     default:
       return state;
